@@ -1,6 +1,6 @@
 # Ansible Role: Nginx
 
-[![CI](https://github.com/geerlingguy/ansible-role-nginx/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-nginx/actions?query=workflow%3ACI)
+[![CI](https://github.com/geerlingguy/ansible-role-nginx/actions/workflows/ci.yml/badge.svg)](https://github.com/geerlingguy/ansible-role-nginx/actions/workflows/ci.yml)
 
 **Note:** Please consider using the official [NGINX Ansible role](https://github.com/nginxinc/ansible-role-nginx) from NGINX, Inc.
 
@@ -154,6 +154,10 @@ Configures Nginx's [`log_format`](http://nginx.org/en/docs/http/ngx_http_log_mod
     nginx_yum_repo_enabled: true
 
 (For RedHat/CentOS only) Set this to `false` to disable the installation of the `nginx` yum repository. This could be necessary if you want the default OS stable packages, or if you use Satellite.
+
+    nginx_zypper_repo_enabled: true
+
+(For Suse only) Set this to `false` to disable the installation of the `nginx` zypper repository. This could be necessary if you want the default OS stable packages, or if you use Suse Manager.
 
     nginx_service_state: started
     nginx_service_enabled: yes
